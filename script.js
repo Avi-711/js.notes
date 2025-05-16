@@ -1,4 +1,4 @@
-   
+   /*
   //   Arithmetic Operators 
 
   // Addition  Operators 
@@ -469,7 +469,7 @@ let line431 = {
 
  let line481 = ["hello" , "hoo", "bye",48,20,38,]
  let line482= line481.filter ((value) =>{ 
-  if (typeof(value) === "string")
+  if (typeof(value) === "number")
   {
     return true;
   }
@@ -505,6 +505,8 @@ let line431 = {
  console.log(line511.indexOf(3));
 
  console.log(line511.find( line512 => line512 > 5));
+
+ 
 
   // Hoisting & Declerlction 
   
@@ -543,7 +545,7 @@ let line431 = {
  // global scope 
 //  var line544 = 2;
 //  let  line544 = 2;
- const line544 = 2; 
+ const line544 = 2;  
 
  console.log(line544);
 
@@ -567,5 +569,241 @@ let line431 = {
 line562(); 
 
 
+// classes
+
+class human {
+  // properties
+  age574 = 38;  // public inside use and outside class 
+  #wt575 = 33;  // private only use inside class how to use name # + this pro
+  ht = 388;
+
+  constructor(line578newage,line579newweight,line580newheigt) {
+    this.age574 = line578newage;
+    this.ht = line580newheigt;
+    this.#wt575 = line580newheigt;
+  }
+
+  // behaviour  
+
+  walking() { 
+    console.log("i am walking")
+  }
+
+  running(){
+    console.log("i am running" ,this.#wt575)
+  };
+
+get fetchmeweigt() {
+  return this.#wt575;
+}
+
+set modifyweight(line592) {
+  this.#wt575 = line592;
+}
+
+}
+
+let line589 = new human ();
+console.log(line589.fetchmeweigt);
+ 
+line589.running();
 
 
+// defult value 
+
+function line612( line613 = "hello") 
+{  
+  console.log("my name is:" , line613);
+}
+
+line612();
+
+// for each 
+
+let line624 = [28,38,92,28,92,20,];
+line624.forEach((value,index) => {
+  console.log("number",value, "index",index)
+})
+
+
+// for in 
+
+let line633 = {
+  hello: "hi",
+  he: 28,
+  dhi:83,
+  he:"388",
+}
+
+for (let key in line633 ){
+ console.log(key ," " ,line633[key]) 
+}
+
+
+// for of 
+
+let line647 = [28,389,594,838,]
+for (let value of line647)
+  console.log(value);
+
+let line651 = [3,4,2,6,7,4,];
+function line652 (line651) {
+  let line653 = 0;
+  line651.forEach((value) => {
+    line653 = line653 + value;
+  })
+  return line653;
+}
+let line659 = line652(line651);
+console.log(line659)
+// hi()
+ let hi = function  () {
+  let age = 38;
+  console.log(age)
+} 
+// hi()
+
+
+// pi 
+
+console.log("hello");
+
+
+console.log(Math.PI)
+
+console.log(Math.max(38,39,29,83,95,292,58,));
+
+console.log(Math.min(38,39,29,83,95,292,58,));
+
+console.log(Math.round(1.4));
+
+console.log(Math.floor(1.4));
+
+console.log(Math.ceil(1.1));
+
+console.log(Math.abs(-5));
+
+console.log(Math.random());
+
+
+//  Object clone 
+
+let line691 = {
+  age : 23,
+  wt:38,
+  ht:38,
+};
+
+let line698 = {
+  age:83,
+  wt:8,
+  ht:38,
+}
+// let dest = {...line691} // clone proparty  spered opartor
+
+let dest = Object.assign({ },line691,line698) //  assign proparty cloneing 
+
+// dest.age = 3; 
+
+console.log("age",line691);
+
+console.log("src",dest);
+
+// error handling
+
+ // compile time error 
+
+//  syntex error 
+//  console.log(1;
+  
+
+// Run time error 
+// console.log(x);
+
+// try {
+
+//   console.log("try block stats here ")
+//   console.log(x);
+
+//   console.log("try block")
+//   // a
+
+//   // b 
+
+//   // c
+
+// }
+
+// catch(e) {
+//   // define karte hi error sath aap  kya karna chahte ho  // retry locic 
+//   // fallback machanism // logging  // custom error
+//   console.log("i am  inside catch block")
+//   console.log("your error is here", e)
+// }
+
+// 2nd 
+
+// finally block -> wil run everytime 
+
+// finally {
+//   console.log("i will run evertime as i am finally block ")
+// }
+
+
+// throw  // create custom create  error expaile // avi error
+
+// try {
+//   console.log(x);
+// }
+// catch(err) {
+// // khudaka error aise bhejte hai throw keyword 
+// throw new Error(" bhai pehle declare kro, fir print karna")
+
+// };
+
+let errorcode = 100;
+if(errorcode==100 ) {
+  throw new Error('invalid json');
+}
+
+// Js dom 
+
+*/
+
+// function myFunction() {
+//   const element = document.getElementsByTagName("h2") [0];
+//   element.outerHTML = "<h3> you changed me and my content </h3>";
+//      }
+
+  //  addEventListener 
+
+// function hello () {
+//   console.log(event)
+//    let hi = document.querySelector("#fpara")
+//    hi.textContent = "hello avi"
+// }
+
+// let hi = document.querySelector("#fpara");
+
+// hi.addEventListener("click",hello);
+// hi.removeEventListener("click",hello)
+
+    // change default behevior
+
+// let anchorElement = document.getElementById('fan') ;
+
+// anchorElement.addEventListener('click',function(event )
+// {
+//    event.preventDefault();
+//    anchorElement.textContent = 'click done hi'
+// });          
+
+    // Adding to many listener  
+
+    
+    function line804 (event) {
+      alert("you have clicked on para" + event.target.textContent);
+
+    }
+    let mydiv = document.getElementById("wrapper");
+    document.addEventListener("click",line804)
